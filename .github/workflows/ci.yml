@@ -14,10 +14,10 @@ jobs:
     strategy:
       matrix:
         name: ['trilby']
-        edition: ['workstation', 'server']
+        edition: ['server']
         release: ['unstable']
         hostArch: ['x86_64']
-        format: ['isoImage']
+        format: ['virtualBoxOVA']
     runs-on: 'ubuntu-latest'
     name: ${{ matrix.name }}-${{ matrix.edition }}-${{ matrix.release }}-${{ matrix.hostArch }}-${{ matrix.format }}
     steps:
