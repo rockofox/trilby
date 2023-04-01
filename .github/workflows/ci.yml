@@ -33,3 +33,9 @@ jobs:
           --accept-flake-config \
           --print-build-logs \
           .#${{ matrix.name }}-${{ matrix.edition }}-${{ matrix.release }}-${{ matrix.hostArch }}-${{ matrix.format }}
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: result
+        path: |
+          result
