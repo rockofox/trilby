@@ -15,7 +15,7 @@ jobs:
       matrix:
         name: ['trilby']
         edition: ['workstation', 'server']
-        release: ['unstable', '22.11', '22.05']
+        release: ['unstable']
         hostArch: ['x86_64']
         format: ['isoImage']
     runs-on: 'ubuntu-latest'
