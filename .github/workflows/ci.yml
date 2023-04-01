@@ -13,7 +13,7 @@ jobs:
   build:
     strategy:
       matrix:
-        name: ['trilby'];
+        name: ['trilby']
         edition: ['workstation', 'server']
         release: ['unstable', '22_11', '22_05']
         hostArch: ['x86_64']
