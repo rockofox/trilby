@@ -33,9 +33,9 @@ jobs:
           --accept-flake-config \
           --print-build-logs \
           .#${{ matrix.name }}-${{ matrix.edition }}-${{ matrix.release }}-${{ matrix.hostArch }}-${{ matrix.format }}
+    - run: echo "UPLOAD_PATH=$(readlink -f result)" >> $GITHUB_ENV
     - name: Archive artifacts
       uses: actions/upload-artifact@v3
       with:
         name: result
-        path: |
-          result
+        path: ${{ env.UPLOAD_PATH }}
