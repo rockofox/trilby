@@ -16,7 +16,7 @@ jobs:
         name: ['trilby']
         edition: ['server']
         release: ['unstable']
-        hostArch: ['x86_64']
+        hostArch: ['aarch64']
         format: ['virtualBoxOVA']
     runs-on: 'ubuntu-latest'
     name: ${{ matrix.name }}-${{ matrix.edition }}-${{ matrix.release }}-${{ matrix.hostArch }}-${{ matrix.format }}
